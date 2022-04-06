@@ -37,6 +37,16 @@ const app = Vue.createApp({
         } catch(ex){
             alert(ex.message)
         }
+    },
+    async deleteDuathlete(bibId){
+        const url = baseUrl + "/" + bibId
+        try{
+            const response = await axios.delete(url)
+            this.duathleteMessage = "Response: " + response.status + " " + response.statusText
+            this.getAllDuathletes()
+        }catch(ex){
+            alert(ex.message)
+        }
     }
  }
 

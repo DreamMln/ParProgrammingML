@@ -38,6 +38,12 @@
         <button v-on:click="postDuathletes()" class="btn btn-primary">Post a duathlete</button>
         <div><b>  {{ duathleteMessage }}  </b></div>
 
+        <h2>Delete (remove duathlete)</h2>
+        <input v-model.number="bibId" placeholder="bibId" type="number" />
+        <button v-on:click="deleteDuathlete(bibId)" class="btn btn-warning">Delete</button>
+        <div><b>{{  duathleteMessage  }}</b></div>
+        <br>
+
 
 
     </div>
