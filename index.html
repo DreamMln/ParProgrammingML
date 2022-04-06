@@ -12,7 +12,31 @@
 </head>
 <body>
     <div id="app">
+        <table>
+            <tr>
+                <th>
+                    Duathletes
+                </th>
+            </tr>
+            <tr v-for="duathlete in duathletes">
+                <td>
+                    {{ duathlete }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ getAllDuathletes() }}
+                </td>
+            </tr>
+        </table>
 
+        <h2>Post a Duathlete</h2>
+        <input v-model="postData.name" type="text" placeholder="name..." />
+        <input v-model="postData.ageGroup" type="number" placeholder="age..." />
+        <input v-model="postData.bike" type="number" placeholder="bike..." />
+        <input v-model="postData.run" type="number" placeholder="run..." />
+        <button v-on:click="postDuathletes()" class="btn btn-primary">Post a duathlete</button>
+        <div><b>  {{ duathleteMessage }}  </b></div>
     </div>
     <script defer src="index.js"></script>
 </body>
