@@ -29,6 +29,15 @@ const app = Vue.createApp({
             alert(ex.message) 
         }
     },
+    async postDuathletes(){
+        try{
+            const result = await axios.post(baseUrl, this.postData)
+            this.duathleteMessage = "Response: " + result.status + " " + result.statusText
+            this.getAllDuathletes()
+        } catch(ex){
+            alert(ex.message)
+        }
+    }
  }
 
 }).mount("#app")
