@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="app">
-        <table>
+        <table id="getDuathlete" v-if="duathletes.length > 0">
             <tr>
                 <th>
                     Duathletes
@@ -21,11 +21,6 @@
             <tr v-for="duathlete in duathletes">
                 <td>
                     {{ duathlete }}
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    {{ getAllDuathletes() }}
                 </td>
             </tr>
         </table>

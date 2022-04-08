@@ -15,6 +15,12 @@ const app = Vue.createApp({
             duathleteMessage: "",
         }
     },
+    //en metode - kaldt i livscyklussen
+    created() 
+    {
+        this.getAllDuathletes() 
+    },
+
  methods:{
     getAllDuathletes(){
         this.getAllDuathleteshelper(baseUrl)
