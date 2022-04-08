@@ -31,17 +31,17 @@
         </table>
 
         <h2>Post a Duathlete</h2>
-        <input v-model="postData.name" type="text" placeholder="name..." />
-        <input v-model="postData.ageGroup" type="number" placeholder="age..." />
-        <input v-model="postData.bike" type="number" placeholder="bike..." />
-        <input v-model="postData.run" type="number" placeholder="run..." />
-        <button v-on:click="postDuathletes()" class="btn btn-primary">Post a duathlete</button>
-        <div><b>  {{ duathleteMessage }}  </b></div>
+        <input id="inputName" v-model="postData.name" type="text" placeholder="name..." />
+        <input id="inputAge" v-model="postData.ageGroup" type="number" placeholder="age..." />
+        <input id="inputBike" v-model="postData.bike" type="number" placeholder="bike..." />
+        <input id="inputRun" v-model="postData.run" type="number" placeholder="run..." />
+        <button id="buttonPost" v-on:click="postDuathletes()" class="btn btn-primary">Post a duathlete</button>
+        <div><b id="postDuathlete">  {{ duathleteMessage }}  </b></div>
 
         <h2>Delete (remove duathlete)</h2>
-        <input v-model.number="bibId" placeholder="bibId" type="number" />
-        <button v-on:click="deleteDuathlete(bibId)" class="btn btn-warning">Delete</button>
-        <div><b>{{  duathleteMessage  }}</b></div>
+        <input id="inputBibId" v-model.number="bibId" placeholder="bibId" type="number" />
+        <button id="buttonDelete" v-on:click="deleteDuathlete(bibId)" class="btn btn-warning">Delete</button>
+        <div><b id="deleteDuathlete" >{{  duathleteMessage  }}</b></div>
         <br>
 
 
